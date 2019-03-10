@@ -19,7 +19,7 @@ public class Calculator {
         operations.put('*', (number1, number2) -> number1 * number2);
         operations.put('/', (number1, number2) -> number1 / number2);
         operations.put('s', ((number1, number2) -> Math.pow(number1, (1 / number2))));
-        operations.put('p', ((number1, number2) -> Math.pow(number1, number2)));
+        operations.put('p', Math::pow);
         operations.put('t', (number1, number2) -> Math.pow(((number1 + number2) / number1) + 117, number2));
 
     }
